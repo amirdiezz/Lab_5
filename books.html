@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+</head>
+<body>
+
+    <h1>Book Details</h1>
+
+    <script>
+        var bookCollection = [
+            {
+                "Book 1": {
+                    "title": "The Great Gatsby",
+                    "author": "F. Scott Fitzgerald",
+                    "publicationYear": 1925,
+                    "genres": ["Fiction", "Classics"]
+                }
+            },
+            {
+                "Book 2": {
+                    "title": "To Kill a Mockingbird",
+                    "author": "Harper Lee",
+                    "publicationYear": 1960,
+                    "genres": ["Fiction", "Coming-of-Age"]
+                }
+            }
+        ];
+        
+        console.log("(a) The title of the first book: " + bookCollection[0]["Book 1"].title);
+        console.log("(b) The author of the second book: " + bookCollection[1]["Book 2"].author);
+        console.log("(c) The genres of all books: " + bookCollection.map(book => book[Object.keys(book)[0]].genres.join(", ")).join(", "));
+    </script>
+
+</body>
+</html>
